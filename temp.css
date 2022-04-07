@@ -1,0 +1,26 @@
+body {
+    /* display: flex; */
+}
+
+.bkg {
+    outline: auto;
+}
+
+.wrap {
+    position: absolute;
+/* display: inline-flex; */
+background-color: #f5deb3;
+width: 100px;
+height: 100px;
+
+}
+
+.box {
+    /* display: block; */
+    background-color: aqua;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -10px;
+
+}

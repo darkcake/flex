@@ -1,0 +1,238 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #E0DEFC;
+    display: flex;
+    align-items: center;
+}
+
+.outline {
+    outline: auto;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 700px;
+    background: white;
+    font-size: 22pt;
+    font-weight: 600;
+    padding-top: 40px;
+    /* padding-left: 30px; */
+    /* padding-right: 30px; */
+    border-radius: 40px;
+    box-shadow: 0px 10px 30px 5px #9396c15b;  
+    overflow: hidden;
+}
+
+.bottom-bar {
+    height: 100%;
+    background-color: #ffffff;
+    /* width: 100%; */
+    border-radius: 40px 40px 40px 40px;
+    box-shadow: 0px 1px 60px 0px #0038b12d;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* align-content: space-between; */
+    justify-content:space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.head {
+    display: flex;
+    flex-grow: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: rgba(36, 42, 48, 1);
+}
+
+.doughnut {
+    flex-grow: 1;
+    /* position: absolute; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bars {
+    width: 300px;
+    align-self: center;
+    /* position: relative; */
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.bottom-bar {
+    height: 80px;
+    
+}
+
+.top-bar {
+    display: flex;
+    align-content: space-around;
+}
+
+.top-bar .icon {
+    height: 35px;
+    width: 35px;
+    background-color: #249CFD;
+    border-radius: 50%;
+}
+
+.icons {
+    width: auto;
+}
+
+.title {
+flex-grow: 1;
+}
+
+.chart {
+    /* flex-grow: 1; */
+    background-color: #249bfd00;
+    position: absolute;
+    height: 100px;
+}
+
+.chart2 {
+    background-color: #249bfd00;
+    position: absolute;
+    height: 100px;
+ 
+}
+
+.percent {
+    display: flex;
+    align-self: center;
+    position: absolute;
+    top: 225px;
+    font-size: 58pt;
+    letter-spacing: -10px;
+    color: rgba(35, 41, 47, 1);
+    line-height: 46px;
+    /* align-items: center; */
+    /* align-content: center; */
+    flex-direction: column;
+    width: fit-content;
+    /* height: 100%; */
+    /* position: absolute; */
+}
+
+.piechart {
+
+    flex-direction: column;
+    /* align-items: center; */
+    /* align-content: center; */
+    /* position: relative; */
+    display: flex;
+    position: relative;
+    /* width: 200px;
+    height: 300px; */
+    /* width: auto;     */
+    /* flex-grow: 1; */
+    /* height: auto; */
+}
+
+.counter-tasks {
+    /* position: absolute;s */
+    font-size: 10pt;
+    letter-spacing: 0px;
+    
+}
+
+.hey {
+    position: relative;
+   
+}
+
+.icon {
+    color: rgba(172, 172, 172, 1);
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    background-color: #249CFD;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.material-icons-outlined.md-18 { font-size: 18px; }
+.material-icons-outlined.md-24 { font-size: 24px; }
+.material-icons-outlined.md-36 { font-size: 36px; }
+.material-icons-outlined.md-48 { font-size: 48px; }
+
+#pie-canv {
+    position: absolute;
+}
+#pie-canv2 {
+    position: absolute; 
+}
+
+.percent-counter {
+    position: absolute;
+    /* top: 170px;
+    left: 80px; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 68px;
+    letter-spacing: -2px;
+    color:rgba(36, 42, 48, 1);
+}
+
+.percent-counter div {
+    font-size: 12px;
+    letter-spacing: 0px;
+
+}
+
+.holed-btn {
+    display: flex;
+    background: none;
+    border-style: solid;
+    border-color: #249CFD;
+    border-width: 2px;
+    border-radius: 50px;
+    width: 100%;
+    height: 50px;
+    font-size: 12pt;
+    color: #249CFD;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 10px; */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.holed-btn:hover {
+    display: flex;
+    background-color: #cae7ff;
+
+}
+
+#barchart {
+    /* padding-top: 10px; */
+    /* padding-bottom: 15px; */
+}
+
+.cus-select {
+
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+    <div class="screen">
+        <div class="head">My Efficiency
+          <div class="circle">
+            <span class="md-18 material-icons-outlined">file_upload</span>
+          </div>
+        </div>
+        <div class="doughnut">
+          <div class="percent-counter">85%
+            <div>of tasks completed</div>
+          </div>
+          <canvas id="pie-canv2"></canvas>
+          <canvas id="pie-canv"></canvas>
+            
+        </div>
+        <div class="bars">
+            <canvas id="barchart"></canvas>
+            <button class="holed-btn">For Junuary
+              <span class="material-icons-outlined">keyboard_arrow_down</span>
+            </button>
+        </div>
+        <div class="bottom-bar">
+            <span class="material-icons-outlined">home</span>
+            <span class="material-icons-outlined">calendar_today</span>
+            <span class="material-icons-outlined">poll</span>
+            <span class="material-icons-outlined">tune</span>
+        </div>
+            
+    </div>
+</body>
+</html>
+
+<script>
+var options = {
+  type: 'bar',
+  data: {
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    datasets: [{
+      data: [80, 60, 30, 80, 36, 40],
+      backgroundColor: ['rgba(86, 201, 213, 1)', 'rgba(245, 180, 103, 1)', 'rgba(214, 85, 212, 1)', 'rgba(99, 87, 213, 1)', 'rgba(85, 132, 213, 1)', 'rgba(85, 214, 141, 1)'],
+      borderRadius: Number.MAX_VALUE,
+      borderSkipped: false,
+    }, {data: [100, 100, 100, 100, 100, 100], borderSkipped: false, borderRadius: Number.MAX_VALUE, backgroundColor: 'rgba(239, 246, 252, 1)', labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]}]
+  },
+  options: {barThickness:18, responsive: true,
+            scales: {x: {display: true, grid: {display: false, drawBorder: false}, ticks: { font: {size: 11, weight: '400'}}, stacked: true}, y: {display: false, stacked: false, grid: {display: false}}}, 
+        plugins: {legend: {display: false }}}
+}
+
+ let ctx = document.getElementById('barchart').getContext('2d');
+ const barChart = new Chart(ctx, options);
+
+</script>
+
+
+<script>
+
+const ShadowPlugin = {
+  beforeDraw: (chart, args, options) => {
+    const { ctx } = chart;
+    ctx.shadowColor = "rgba(15, 161, 83, 0.7)";
+    ctx.shadowBlur = 30;
+    ctx.shadowOffsetX = 0;
+    ctx.shadowOffsetY = 14;
+  },
+};
+
+    const labels = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      "Jule",
+      "August"
+    ];
+
+    const data = {
+        labels: [
+            'Red',
+            'Blue',
+            'Yellow'
+         ],
+         datasets: [{
+             
+         label: 'My First Dataset',
+         data: [90,10],
+         borderWidth: 0,
+         borderRadius: 500,
+         spacing: 1,
+         weight: 1,
+         rotation: -10,
+         radius: '80%',
+        //  circumference: 330,
+         cutout: '85%',
+         hoverBorderWidth: 0,
+         hoverBorderColor: 'rgb(255, 255, 255)',
+
+         backgroundColor: [
+          'rgba(85, 214, 141, 1)','rgba(85, 214, 141, 0)'
+      ],
+       hoverOffset: 0
+      }]
+    };
+
+    const data2 = {
+        labels: [
+            'Red',
+            'Blue',
+            'Yellow'
+         ],
+         datasets: [{
+         label: 'My First Dataset',
+         data: [90,10],
+         borderWidth: 0,
+         borderRadius: 500,
+         spacing: 10,
+         weight: 1,
+         rotation: -10,
+         radius: '70%',
+        //  circumference: 330,
+         cutout: '85%',
+         hoverBorderWidth: 0,
+         hoverBorderColor: 'rgb(255, 255, 255)',
+
+         backgroundColor: [
+          'rgba(72, 195, 125, 1)','rgba(85, 214, 141, 0.01)'
+      ],
+       hoverOffset: 0
+      }]
+    };
+  
+    const config = {
+      type: 'doughnut',
+      data: data,
+      options: {
+        responsive: true,
+        // aspectRation: 1,
+          plugins: {
+              legend: {
+                  display: false
+              }
+          }
+      },
+      plugins: [ShadowPlugin]
+    };
+
+    const config2 = {
+      type: 'doughnut',
+      data: data2,
+      options: {
+        // aspectRation: 1,
+        responsive: true,
+          plugins: {
+              legend: {
+                  display: false
+              }
+          }
+      },
+      plugins: [ShadowPlugin]
+    };
+  </script>
+
+<script>
+    const myChart = new Chart(
+      document.getElementById("pie-canv"),
+      config
+    );
+
+    const myChart2 = new Chart(
+      document.getElementById("pie-canv2"),
+      config2
+    );
+  </script>
